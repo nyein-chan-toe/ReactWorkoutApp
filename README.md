@@ -1,69 +1,79 @@
-# React Workout App UI Kit
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-![React Native](https://img.shields.io/badge/React%20Native-0.63-blue)
-![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
+# Getting Started
 
-## Table of Contents
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Contributing](#contributing)
+## Step 1: Start the Metro Server
 
-## Introduction
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-Welcome to the **React Workout App UI Kit**! This project is a collection of reusable components for building a workout app using React Native. Whether you are developing a fitness tracker, a workout logger, or a personal training app, this UI kit will help you create a polished and professional user interface.
+To start Metro, run the following command from the _root_ of your React Native project:
 
-## Features
+```bash
+# using npm
+npm start
 
-- **Responsive Design**: Optimized for both iOS and Android devices.
-- **Customizable Components**: Easily customize the look and feel to match your app's branding.
-- **Pre-built Screens**: Includes commonly used screens like Login, Signup, Workout Dashboard, and more.
-- **Theming Support**: Change the theme with minimal effort.
-- **Easy Integration**: Simple and straightforward to integrate into your existing React Native project.
+# OR using Yarn
+yarn start
+```
 
-## Installation
+## Step 2: Start your Application
 
-To start using the React Workout App UI Kit, you need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-1. **Clone the repository:**
+### For Android
 
-    ```bash
-    git clone https://github.com/nyein-chan-toe/react-workout-app.git
-    cd react-workout-app
-    ```
+```bash
+# using npm
+npm run android
 
-2. **Install the dependencies:**
+# OR using Yarn
+yarn android
+```
 
-    ```bash
-    npm install
-    ```
+### For iOS
 
-3. **Run the project:**
+```bash
+# using npm
+npm run ios
 
-    ```bash
-    npm start
-    ```
+# OR using Yarn
+yarn ios
+```
 
-## Usage
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-To use the components in your React Native app, simply import them as needed. Below is an example of how to use the `WorkoutCard` component.
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-```jsx
-import React from 'react';
-import { WorkoutCard } from 'react-workout-app-ui-kit';
+## Step 3: Modifying your App
 
-const MyWorkoutScreen = () => {
-  return (
-    <WorkoutCard
-      title="Full Body Workout"
-      duration="45 min"
-      difficulty="Intermediate"
-      onPress={() => console.log('Workout Pressed')}
-    />
-  );
-};
+Now that you have successfully run the app, let's modify it.
 
-export default MyWorkoutScreen;
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
