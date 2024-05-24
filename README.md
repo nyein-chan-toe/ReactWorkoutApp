@@ -1,7 +1,6 @@
 # React Workout App UI Kit
 
 ![React Native](https://img.shields.io/badge/React%20Native-0.63-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 ## Table of Contents
@@ -12,7 +11,6 @@
 - [Usage](#usage)
 - [Components](#components)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -33,7 +31,7 @@ To start using the React Workout App UI Kit, you need to have [Node.js](https://
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/react-workout-app.git
+    git clone https://github.com/nyein-chan-toe/react-workout-app.git
     cd react-workout-app
     ```
 
