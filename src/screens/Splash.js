@@ -28,7 +28,8 @@ export default function Splash() {
             alignSelf: 'center',
             height: height / 7,
             width: width - 40,
-          }}></Image>
+          }}
+        />
       </View>
 
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

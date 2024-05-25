@@ -12,6 +12,7 @@ import {Colors} from '../theme/color';
 import themeContext from '../theme/themeContext';
 import theme from '../theme/theme';
 import Splash from '../screens/Splash';
+import Introduction from '../screens/introduction';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,10 +54,12 @@ export default function StackNavigator() {
               options={{headerShown: false}}
             />
           ) : null}
+          <Stack.Screen
+            name="Introduction"
+            component={Introduction}
+            options={{headerShown: false}}
+          />
         </Stack.Navigator>
-        <View>
-          <Text>Hello World</Text>
-        </View>
       </NavigationContainer>
     </themeContext.Provider>
   );
