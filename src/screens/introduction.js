@@ -1,11 +1,18 @@
-import {View, TouchableOpacity, Dimensions, Text} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import theme from '../theme/theme';
-import React, {useState} from 'react';
-import {Avatar} from 'react-native-paper';
-import {useNavigation} from '@react-navigation/native';
+import {
+  View,
+  Text,
+  FlatList,
+  SafeAreaView,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
+import React, {useState, useContext} from 'react';
+import IntroItem from '../components/IntroItem';
 import Slides from '../Slides';
 import style from '../theme/style';
+import {useNavigation} from '@react-navigation/native';
+import {Avatar} from 'react-native-paper';
+import themeContext from '../theme/themeContext';
 
 const width = Dimensions.get('screen').width;
 
@@ -13,6 +20,7 @@ export default function Introduction() {
   const ref = React.useRef(null);
   const navigation = useNavigation();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const theme = useContext(themeContext);
 
   const Footer = () => {
     return (
@@ -137,8 +145,20 @@ export default function Introduction() {
       setCurrentSlideIndex(nextSlideIndex);
     }
   };
+
   return (
     <SafeAreaView style={{flex: 1}}>
+      <FlatList
+        data={Slides}
+        ref={ref}
+        renderItem={({item}) => <IntroItem item={item} />}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        pagingEnabled
+        bounces={false}
+        keyExtractor={item => item.id}
+        onMomentumScrollEnd={updateCurrentSlideIndex}
+      />
       <Footer />
     </SafeAreaView>
   );
