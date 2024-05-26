@@ -11,8 +11,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Colors} from '../theme/color';
 import themeContext from '../theme/themeContext';
 import theme from '../theme/theme';
-import Splash from '../screens/Splash';
-import Introduction from '../screens/introduction';
+import Splash from '../screens/SplashScreen';
+import Introduction from '../screens/IntroductionScreen';
+import FinalOnBoarding from '../screens/FinalOnBoardingScreen';
+import SignupScreen from '../screens/SignupScreen';
+import BottomNavigationScreen from '../screens/BottomNavigationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +60,21 @@ export default function StackNavigator() {
           <Stack.Screen
             name="Introduction"
             component={Introduction}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="FinalOnBoarding"
+            component={FinalOnBoarding}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Signup"
+            component={SignupScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="BottomNavigator"
+            component={BottomNavigationScreen}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
