@@ -1,6 +1,5 @@
-import {StatusBar, Text, View} from 'react-native';
+import {StatusBar} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 import {
   NavigationContainer,
   DarkTheme,
@@ -16,11 +15,14 @@ import Introduction from '../screens/IntroductionScreen';
 import FinalOnBoarding from '../screens/FinalOnBoardingScreen';
 import SignupScreen from '../screens/SignupScreen';
 import BottomNavigationScreen from '../screens/BottomNavigationScreen';
+import LoginScreen from '../screens/LoginScreen';
+import LoginEmailScreen from '../screens/LoginEmailScreen';
+import CreateAccountScreen from '../screens/CreateAccountScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigator() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode] = useState(false);
   // const toggleSwitch = () => setDarkMode(previousState => !previousState);
 
   // useEffect(() => {
@@ -65,6 +67,23 @@ export default function StackNavigator() {
           <Stack.Screen
             name="FinalOnBoarding"
             component={FinalOnBoarding}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{headerShown: false}}
+          />
+
+          <Stack.Screen
+            name="loginemail"
+            component={LoginEmailScreen}
+            options={{headerShown: false}}
+          />
+
+          <Stack.Screen
+            name="CreatAccount"
+            component={CreateAccountScreen}
             options={{headerShown: false}}
           />
           <Stack.Screen
