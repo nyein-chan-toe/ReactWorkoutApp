@@ -47,28 +47,6 @@ To start using the React Workout App UI Kit, you need to have [Node.js](https://
     npm start
     ```
 
-## Usage
-
-To use the components in your React Native app, simply import them as needed. Below is an example of how to use the `WorkoutCard` component.
-
-```jsx
-import React from 'react';
-import { WorkoutCard } from 'react-workout-app-ui-kit';
-
-const MyWorkoutScreen = () => {
-  return (
-    <WorkoutCard
-      title="Full Body Workout"
-      duration="45 min"
-      difficulty="Intermediate"
-      onPress={() => console.log('Workout Pressed')}
-    />
-  );
-};
-
-export default MyWorkoutScreen;
-```
-
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
